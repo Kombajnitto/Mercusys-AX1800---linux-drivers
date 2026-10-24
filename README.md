@@ -61,14 +61,6 @@ Uwaga: test identyfikatora w `modinfo` potwierdza obecność aliasu urządzenia,
 ale nie potwierdza, że moduł został załadowany ani że adapter działa. Jeśli
 Secure Boot jest włączony, kernel może wymagać podpisania modułów DKMS.
 
-Sterownik próbuje przełączyć adaptery AX USB z USB 2 na SuperSpeed USB 3.
-Jeśli po przełączeniu połączenie w paśmie 2,4 GHz staje się niestabilne,
-wyłącz tę funkcję, dopisz poniższy wpis i uruchom ponownie:
-
-```bash
-echo 'options rtw89_usb switch_usb_mode=N' | sudo tee /etc/modprobe.d/rtw89-usb.conf
-```
-
 4. Po zakończeniu zrestartuj komputer lub odłącz i podłącz ponownie adapter USB. W razie potrzeby uruchom ponownie system.
 
 ## Weryfikacja
